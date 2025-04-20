@@ -97,16 +97,19 @@ This repository is built based on [nnFormer](https://github.com/282857341/nnForm
 ## Citation
 If you use our work, please consider citing:
 ```bibtex
-@INPROCEEDINGS{10635414,
-  author={Kareem, Daniya Najiha A. and Fiaz, Mustansar and Novershtern, Noa and Cholakkal, Hisham},
-  booktitle={2024 IEEE International Symposium on Biomedical Imaging (ISBI)}, 
-  title={Medical Image Segmentation Using Directional Window Attention}, 
-  year={2024},
-  volume={},
-  number={},
-  pages={1-5},
-  keywords={Image segmentation;Image coding;Three-dimensional displays;Microprocessors;Source coding;Computer architecture;Transformers},
-  doi={10.1109/ISBI56570.2024.10635414}}
+@ARTICLE{10374077,
+author={Abdul Kareem, Daniya Najiha and Fiaz, Mustansar and Novershtern, Noa and Hanna, Jacob and Cholakkal, Hisham},
+journal={ IEEE Transactions on Artificial Intelligence },
+title={{ Improving 3-D Medical Image Segmentation at Boundary Regions Using Local Self-Attention and Global Volume Mixing }},
+year={2024},
+volume={5},
+number={06},
+ISSN={2691-4581},
+pages={3233-3244},
+url = {https://doi.ieeecomputersociety.org/10.1109/TAI.2023.3346833},
+publisher={IEEE Computer Society},
+address={Los Alamitos, CA, USA},
+month=jun}
 
 ```
 
