@@ -31,7 +31,7 @@ Our proposed vMixer achieves favorable segmentation performance against existing
 ### Synapse Dataset
 Qualitative comparison on multi-organ segmentation task. Here, we compare our method with existing methods: UNETR, Swin UNETR, and nnFormer. 
 The different abdominal organs are shown in the legend below the examples. Existing methods struggle to correctly segment different organs (marked in red dashed box). 
-Our DwinFormer achieves promising segmentation performance by accurately segmenting the organs.
+Our vMixer achieves promising segmentation performance by accurately segmenting the organs.
 <p align="center">
   <img src="MEDIA/qual.png" alt="Qualitative Results" width="800">
 </p>
@@ -43,7 +43,7 @@ The code is tested with PyTorch 1.11.0 and CUDA 11.3. After cloning the reposito
 1. Create and activate conda environment
 ```shell
 conda env create -f environment.yml
-conda activate dwinformer
+conda activate vmixer
 ```
 <hr />
 
@@ -54,8 +54,8 @@ The dataset folders for Synapse should be organized as follows:
 
 ```
 ./DATASET_Synapse/
-  ├── dwinformer_raw/
-      ├── dwinformer_raw_data/
+  ├── vmixer_raw/
+      ├── vmixer_raw_data/
            ├── Task02_Synapse/
               ├── imagesTr/
               ├── imagesTs/
@@ -63,7 +63,7 @@ The dataset folders for Synapse should be organized as follows:
               ├── labelsTs/
               ├── dataset.json
            ├── Task002_Synapse
-       ├── dwinformer_cropped_data/
+       ├── vmixer_cropped_data/
            ├── Task002_Synapse
  ```
  
@@ -71,20 +71,20 @@ Please refer to [Setting up the datasets](https://github.com/282857341/nnFormer)
 Alternatively, you can download the preprocessed dataset for [Synapse](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/abdelrahman_youssief_mbzuai_ac_ae/EbHDhSjkQW5Ak9SMPnGCyb8BOID98wdg3uUvQ0eNvTZ8RA?e=YVhfdg) and extract it under the project directory.
 
 ## Training
-The following script can be used for training our DwinFormer model on the Multi-organ Synapse dataset:
+The following script can be used for training our vMixer model on the Multi-organ Synapse dataset:
 ```shell
-bash script.sh
+bash train_inference.sh
 ```
 
 <hr />
 
 ## Evaluation
 
-To reproduce the results of dwinformer: 
+To reproduce the results of vMixer: 
 
 1- Download [Synapse weights](https://drive.google.com/drive/u/3/folders/1gUIUL-tNqlkSzky51GJBMvivdyH7WA6Q?dmr=1&ec=wgc-drive-hero-goto) and paste ```model_best.model``` in the following path:
 ```shell
-dwinformer/3d_fullres/Task002_Synapse/dwinformerTrainerV2_dwinformer_synapse__dwinformerPlansv2.1/fold_0/
+vmixer/3d_fullres/Task002_Synapse/vmixerTrainerV2_vmixer_synapse__vmixerPlansv2.1/fold_0/
 ```
 Then, run 
 ```shell
