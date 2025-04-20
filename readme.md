@@ -8,7 +8,7 @@ Mohamed Bin Zayed University of Artificial Intelligence<sup>1</sup>, Weizmann In
 
 <hr />
 <p align="center">
-  <img src="MEDIA/intro.png" alt="Architecture Figure" width="500">
+  <img src="MEDIA/intro.png" alt="Architecture Figure" width="600">
 </p>
 
 > **Abstract:** *Volumetric medical image segmentation is a fundamental problem in medical image analysis where the objective is to accurately classify a given 3D volumetric medical image with voxel-level precision. In this work, we propose a novel hierarchical encoder-decoder-based framework that strives to explicitly capture the local and global dependencies for volumetric 3D medical image segmentation. The proposed framework exploits local volume-based self-attention to encode the local dependencies at high resolution and introduces a novel volumetric MLP-mixer to capture the global dependencies at low-resolution feature representations, respectively. The proposed volumetric MLP-mixer learns better associations among volumetric feature representations. These explicit local and global feature representations contribute to better learning of the shape-boundary characteristics of the organs. Extensive experiments on three different datasets reveal that the proposed method achieves favorable performance compared to state-of-the-art approaches. On the challenging Synapse Multi-organ dataset, the proposed method achieves an absolute 3.82\% gain over the state-of-the-art approaches in terms of HD95 evaluation metrics {while a similar improvement pattern is exhibited in MSD Liver and Pancreas tumor datasets}. We also provide a detailed comparison between recent architectural design choices in the 2D computer vision literature by adapting them for the problem of 3D medical image segmentation. Finally, our experiments on the ZebraFish 3D cell membrane dataset having limited training data demonstrate the superior transfer learning capabilities of the proposed vMixer model on the challenging 3D cell instance segmentation task, where accurate boundary prediction plays a vital role in distinguishing individual cell instances.* 
@@ -18,7 +18,7 @@ Mohamed Bin Zayed University of Artificial Intelligence<sup>1</sup>, Weizmann In
 
 ### Synapse Dataset
 State-of-the-art comparison on the abdominal multi-organ Synapse dataset. We report both the segmentation performance (DSC, HD95).
-Our proposed DwinFormer achieves favorable segmentation performance against existing methods. Best results are in bold. 
+Our proposed vMixer achieves favorable segmentation performance against existing methods. Best results are in bold. 
 
 <p align="center">
   <img src="MEDIA/result.png" alt="Synapse Results" width="300">
@@ -29,7 +29,7 @@ Our proposed DwinFormer achieves favorable segmentation performance against exis
 ## Qualitative Comparison
 
 ### Synapse Dataset
-Qualitative comparison on multi-organ segmentation task. Here, we compare our method with existing methods: Swin UNETR, and nnFormer. 
+Qualitative comparison on multi-organ segmentation task. Here, we compare our method with existing methods: UNETR, Swin UNETR, and nnFormer. 
 The different abdominal organs are shown in the legend below the examples. Existing methods struggle to correctly segment different organs (marked in red dashed box). 
 Our DwinFormer achieves promising segmentation performance by accurately segmenting the organs.
 <p align="center">
